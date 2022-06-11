@@ -9,40 +9,80 @@
 </head>
 <body>
     <header>
-        <div class="container">
+      <div class="container-fluid p-2 my-0 bg-primary text-white">
+      <div class="row">
+        <div class="col-sm-1">
+          <img src="LOGO grupo 5.png" class="rounded-circle" alt="Logo Grupo 5"></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8"></div>
+        <div class="col-sm-2">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">INICIAR SESION</button>
+              <ul class="dropdown-menu">
+                  <form action="/action_page.php">
+                    <div class="mb-2 mt-0">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="pwd">Contraseña:</label>
+                      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                    <div class="form-check mb-3">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> Recordarme
+                      </label>
+                    </li>
+              </ul>
+            </div>
+          </div>
+<nav>
+  <div class="container p-2 my-2 bg-primary text-white">
+    <div class="row">
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-outline-light text-white btn-sm">
+          <a href= #DEFINICIONES></a>INICIO</button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-outline-light text-white btn-sm">
+          <a href="Registracion.html" target="_self"></a>REGISTRARME</button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-outline-light text-white btn-sm">
+          <a href="Registracion.html" target="_self"></a>COTIZACIONES</button>     
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-outline-light text-white btn-sm">
+          <a href="Registracion.html" target="_self"></a>OPERACIONES</button>         
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-outline-light text-white btn-sm">
+          <a href= #CONTACTO></a>CONTACTO</button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-outline-light text-white btn-sm">
+          <a href= #CONTACTO></a> +INFO</button>
+      </div>
+</nav>
+</header>
+<section>
+        <div class="container-fluid bg-secondary">
+          
         <div class="row">
-            <div class="col">
+          <div class="col-sm-1"></div>
+            <div class="col-sm-10">
              <img class="img-fluid" src="criptomonedas.jpg" alt="Criptomonedas">
             </div>
+            <div class="col-sm-1"></div>
         </div>
     </div>
-    <div class="container-fluid p-3 bg-dark text-white text-center">
+    <div class="container-fluid p-3 bg-light text-dark text-center">
         <h1>CRIPTOMONEDAS</h1>
         <p>Divisa alternativa o moneda digital</p> 
       </div>
-        
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-sm-4">
-            <h3>DEFINICI&Oacute;N</h3>
-            <p>Una criptomoneda, criptodivisa o criptoactivo es un medio digital de intercambio que utiliza criptografía fuerte para asegurar las transacciones, controlar la creaci&oacute;n de unidades adicionales y verificar la transferencia de activos usando tecnolog&iacute;as de registro distribuido</P>
-          </div>
-          <div class="col-sm-4">
-            <h3>CARACTERISTICAS</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>LOGIN</h3>        
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </header>
+    </section>
+    
 
-    <!-- ESTE CDN VA EN EL HEAD, PODEMOS PONER UN CDN PROPIO DE CODIGO DE JS EN ESTA PARTE-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
