@@ -1,0 +1,27 @@
+header{ color: white;
+    background-color: black;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contenedor{
+    text-align: center;
+}
+
+.agrupar{
+        width: 600px;
+        margin: left;
+        padding: 100px;
+        text-align: justify;  
+        margin: 20px;
+        width: 600px;
+        padding-bottom: 1cm;
+
+}
+
+
+h2,h3,h4{
+    color:grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
