@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+header.fondo {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  padding-right: 2rem;
+  text-align: left;
+  color: #fff;
+  background-image: url("./assets/Img/fondo crypto.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  }
+  h1.mensaje-bienvenida {
+  line-height: 8rem;
+  margin-left:10px ;
+  }
+  * {
+    box-sizing: border-box;
+  }
+   h3{
+  margin-left:10px ;}
+
+  /* estilo general*/
+  h2, h4{
+    color:rgb(17, 17, 43);
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  h1 {
+    text-align: right;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: inline;
+     /*border: 1px solid darkblue;
+   text-shadow: 3px 3px 1px black;
+    */
+  }
+
+  .titulos{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:black;
+    color: white;
+
+  }
+
+  p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding: 5px;
+  }
