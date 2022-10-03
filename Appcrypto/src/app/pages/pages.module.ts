@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { OperacionesComponent } from './operaciones/operaciones.component';
 import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -25,7 +26,21 @@ import { TransaccionesComponent } from './transacciones/transacciones.component'
     TransaccionesComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule,
+  ],
+
+  exports:[
+    ServiciosComponent,
+    QuienessomosComponent,
+    RegistroComponent,
+    IniciarsesionComponent,
+    IntegranteComponent,
+    HomeComponent,
+    OperacionesComponent,
+    CriptomonedaComponent,
+    TransaccionesComponent
+  ],
 })
+
 export class PagesModule { }
