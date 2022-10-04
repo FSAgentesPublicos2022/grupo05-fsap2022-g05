@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { OperacionesComponent } from './operaciones/operaciones.component';
 import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 
 
@@ -22,7 +23,8 @@ import { TransaccionesComponent } from './transacciones/transacciones.component'
     HomeComponent,
     OperacionesComponent,
     CriptomonedaComponent,
-    TransaccionesComponent
+    TransaccionesComponent,
+    Pagina404Component
   ],
   imports: [
     CommonModule
