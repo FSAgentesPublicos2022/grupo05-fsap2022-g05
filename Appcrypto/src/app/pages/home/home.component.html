@@ -2,15 +2,23 @@
   <div class="row">
     <div class="col-md-2">
       <nav class="nav flex-column">
-      <a class="nav-link active fs-3"
+        <ul class="list-group">
+          <h4>HOME</h4>
+          <li class="list-group-item list-group-item-success">
+          <a class="nav-link " routerLink="/home/operaciones">OPERACIONES</a>
+          </li>
+          <li class="list-group-item list-group-item-success">
+          <a class="nav-link " routerLink="/home/transacciones">MOVIMIENTOS</a>
+        </li>
+        <li class="list-group-item list-group-item-success">
+          <a class="nav-link " routerLink="/home/criptomoneda">CRIPTOMONEDA</a>
+        </li>
+        </ul>
 
-      routerLink="/home/operaciones">Operaciones</a>
-
-      <a class="nav-link " routerLink="/home/transacciones">Transacciones</a>
-      <a class="nav-link " routerLink="/home/criptomoneda">Criptomoneda</a>
-      </nav>
+    </nav>
       </div>
       <div class="col-md-10">
+        <router-outlet></router-outlet>
       </div>
       </div>
       </div>
