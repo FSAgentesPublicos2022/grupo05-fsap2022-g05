@@ -9,7 +9,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { OperacionesComponent } from './pages/operaciones/operaciones.component';
 import { TransaccionesComponent } from './pages/transacciones/transacciones.component';
 import { CriptomonedaComponent } from './pages/criptomoneda/criptomoneda.component';
-import { Pagina404Component } from './pages/pagina404/pagina404.component';
 
 const routes: Routes = [
   {path:'servicios',component:ServiciosComponent},
@@ -22,8 +21,6 @@ children:[
 {path:'operaciones', component: OperacionesComponent},
 {path:'transacciones', component: TransaccionesComponent},
 {path:'criptomoneda', component: CriptomonedaComponent},
-
-{path: '**', component: Pagina404Component}
 ]}
 ]
 
