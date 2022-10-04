@@ -7,10 +7,16 @@ import { ActivatedRoute,Params } from '@angular/router';
   styleUrls: ['./integrante.component.css']
 })
 export class IntegranteComponent implements OnInit {
+  integrante: any;
 
   constructor(private rutaActiva:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.rutaActiva.params.subscribe(
+      (params:Params)=>{
+        this.integrante= params['id'];
+      }
+      );
   }
 
 }

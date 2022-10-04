@@ -1,4 +1,4 @@
-<div class="row">
+<!--<div class="row">
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
     <form action="/action_page.php">
@@ -10,4 +10,43 @@
     </form>
 <div class="col-sm-4"></div>
 </div>
-</div>
+</div>-->
+<form>
+  <div class="titulos"> <h1> REGISTRESE</h1></div>
+<div class="margen">
+   <div class="m-4">
+     <label  class="form-label">Apellido</label>
+     <input type="text" class="form-control" formControlName="apellido">
+     <label class="form-label">Nombre</label>
+     <input type="text" class="form-control" formControlName="nombre">
+    <label class="form-label">Provincia</label>
+     <input class="form-control" list="datalistOptions" id="exampleDataList" Placeholder="Seleccione Provincia..." required>
+             <datalist id="datalistOptions">
+             <option value="Córdoba">
+             <option value="Buenos Aires">
+             <option value="San Luis">
+             <option value="Mendoza">
+             </datalist>
+          
+       <label class="form-label">Localidad</label>
+        <input class="form-control" list="localidadlistOptions" id="localidadDataList" placeholder="Seleccione Localidad...">
+             <datalist id="localidadlistOptions" >
+             <option value="Córdoba">
+             <option value="Rio Primero">
+             <option value="Rio Segundo">
+             <option value="Rio tercero">
+             </datalist>
+
+        <label class="form-label">DNI</label>
+        <input type="number" class="form-control" name="tel" required>
+        <label class="form-label">email</label>
+         <input type="email" class="form-control" name="exampleInputEmail1" required="exampleInputEmail1" aria-describedby="emailHelp">
+         <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+             </div>
+     
+         <button type="submit" class="btn btn-primary button-tamaño">Crear usuario</button>
+      </div>
+    
+
+</form>

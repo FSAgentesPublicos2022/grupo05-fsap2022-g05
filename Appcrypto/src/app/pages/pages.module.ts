@@ -9,8 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { OperacionesComponent } from './operaciones/operaciones.component';
 import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
+import { RouterModule } from '@angular/router'
 import { Pagina404Component } from './pagina404/pagina404.component';
-
 
 
 @NgModule({
@@ -27,7 +27,21 @@ import { Pagina404Component } from './pagina404/pagina404.component';
     Pagina404Component
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule,
+  ],
+
+  exports:[
+    ServiciosComponent,
+    QuienessomosComponent,
+    RegistroComponent,
+    IniciarsesionComponent,
+    IntegranteComponent,
+    HomeComponent,
+    OperacionesComponent,
+    CriptomonedaComponent,
+    TransaccionesComponent
+  ],
 })
+
 export class PagesModule { }

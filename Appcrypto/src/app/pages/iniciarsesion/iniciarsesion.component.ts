@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-iniciarsesion',
@@ -7,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IniciarsesionComponent implements OnInit {
   form: any;
+  mail= new FormControl('',[],[]);
+  password= new FormControl('',[Validators.required, Validators.minLength(8)])
   constructor() { }
 
   ngOnInit(): void {
   }
 }
+
+
+
+  
+
