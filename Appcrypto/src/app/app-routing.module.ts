@@ -16,11 +16,11 @@ const routes: Routes = [
   {path:'quienessomos/:id',component:IntegranteComponent},
   {path:'registro',component: RegistroComponent},
   {path:'iniciarsesion',component:IniciarsesionComponent},
+  {path:'criptomoneda', component:CriptomonedaComponent},
   {path:'home', component: HomeComponent,
 children:[
 {path:'operaciones', component: OperacionesComponent},
-{path:'transacciones', component: TransaccionesComponent},
-{path:'criptomoneda', component: CriptomonedaComponent},
+{path:'transacciones', component: TransaccionesComponent}
 ]}
 ]
 
