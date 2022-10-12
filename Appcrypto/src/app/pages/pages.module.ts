@@ -11,6 +11,7 @@ import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
 import { RouterModule } from '@angular/router'
 import { Pagina404Component } from './pagina404/pagina404.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { Pagina404Component } from './pagina404/pagina404.component';
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule
   ],
 
   exports:[

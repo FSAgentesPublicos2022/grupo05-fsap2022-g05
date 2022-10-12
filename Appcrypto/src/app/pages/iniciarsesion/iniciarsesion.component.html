@@ -1,18 +1,35 @@
-<form>
+<form [formGroup]="form">
     <div class="titulos"> <h1> INICIAR SESION</h1>
-  </div>
+    </div>
   <div class="margen">
-  <div class="m-4">
+  <div class="m-3">
   <label for="exampleInputEmail1" class="form-label">Email</label>
-  <input type="email"  class="form-control" formControlName="mail" id="email" required>
-    
+  <input type="email"  class="form-control" placeholder= "Ingrese email" formControlName="mail" [class.border-danger]="MailValid">
+  <div *ngIf="Mail?.errors && Mail?.touched">
+    <p *ngIf="Mail?.hasError('required')" class="text-danger">
+      El email es requerido.
+    </p>
+    <p *ngIf="Mail?.hasError('email')" class="text-danger">
+      El formato del email debe ser válido.
+    </p>
+  </div>
+  <div class="m-3">
   <label for="exampleInputPassword1" class="form-label">Password</label>
-  <input type="password" class="form-control" formControlName="password" pattern=".{6,}" required>
-  <div class="m-2">
+  <input type="password" class="form-control"placeholder= "Ingrese contraseña" formControlName="password"[class.border-danger]="PasswordValid" pattern=".{6,}" required>
+  <div *ngIf="Password?.errors  && Password?.touched">
+    <p *ngIf="Password?.hasError('required')" class="text-danger">
+      El password es requerido.
+    </p>
+    <p *ng If="Password?.errors?.minlength" class="text-danger">
+      El password debe ser de 8 o más caracteres.
+    </p>
+  </div>
+</div>
+  <div class="m-3">
     <label class="form-check-label">
       <input class="form-check-input" type="checkbox" name="remember"> Recordar me
     </label>
-    <div class="m-2"></div>
+    <div class="m-3"></div>
     <a href="#" >¿Olvidaste tu contraseña?</a>
     </div>
     <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
