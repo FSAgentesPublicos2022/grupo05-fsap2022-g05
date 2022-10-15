@@ -1,17 +1,5 @@
-<!--<div class="row">
-  <div class="col-sm-4"></div>
-  <div class="col-sm-4">
-    <form action="/action_page.php">
-      <label for="fname">Nombre:</label><br>
-      <input type="text" id="fname" name="fname" value="John"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" value="Doe"><br><br>
-      <input type="submit" value="Submit">
-    </form>
-<div class="col-sm-4"></div>
-</div>
-</div>-->
-<form>
+
+<!--<form>
   <div class="titulos"> <h1> REGISTRESE</h1></div>
 <div class="margen">
    <div class="m-4">
@@ -27,7 +15,7 @@
              <option value="San Luis">
              <option value="Mendoza">
              </datalist>
-          
+
        <label class="form-label">Localidad</label>
         <input class="form-control" list="localidadlistOptions" id="localidadDataList" placeholder="Seleccione Localidad...">
              <datalist id="localidadlistOptions" >
@@ -41,12 +29,101 @@
         <input type="number" class="form-control" name="tel" required>
         <label class="form-label">email</label>
          <input type="email" class="form-control" name="exampleInputEmail1" required="exampleInputEmail1" aria-describedby="emailHelp">
-         <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+         <label for="exampleInputpassword1" class="form-label">password:</label>
+          <input type="password" class="form-control" id="exampleInputpassword1">
              </div>
-     
+
          <button type="submit" class="btn btn-primary button-tamaño">Crear usuario</button>
       </div>
-    
 
-</form>
+
+</form>-->
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-12 registro-form-header">
+  <p class="registro-form-font-header">Registro<span> Usuario</span><p>
+  </div>
+  </div>
+  <div class="row m-3">
+  <div class="col-md-12 registro-form">
+  <form [formGroup]="form" class="form" (ngSubmit)="onEnviar($event, usuario)" >
+  <div class="m-3">
+  <label for="nombre" class="form-label" >Nombre</label>
+  <input type="text" id="nombre" class="form-control"
+
+  formControlName="nombre" [(ngModel)]="usuario.nombre" [class.border-danger]="NombreValid" >
+
+  <div *ngIf="Nombre?.errors && Nombre?.touched">
+  <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+  El nombre es requerido.
+  </p>
+  </div>
+  </div>
+  <div class="m-3">
+  <label for="apellido" class="form-label">Apellido</label>
+  <input type="text" id="apellido" class="form-control"
+
+  formControlName="apellido" [(ngModel)]="usuario.apellido"
+  [class.border-danger]="ApellidoValid">
+
+  <div *ngIf="Apellido?.errors && Apellido?.touched">
+  <p *ngIf="Apellido?.hasError('required')" class="text-danger">
+  El apellido es requerido.
+  </p>
+  </div>
+  </div>
+  <div class="m-3">
+  <label for="dni" class="form-label">Dni</label>
+  <input type="number" id="dni" class="form-control" formControlName="dni"
+
+  [(ngModel)]="usuario.dni" [class.border-danger]="DniValid">
+  <div *ngIf="Dni?.errors && Dni?.touched">
+  <p *ngIf="Dni?.hasError('required')" class="text-danger">
+  El dni es requerido.
+  </p>
+  </div>
+  </div>
+  <div class="m-3">
+    <label for="email" class="form-label">Correo Electrónico</label>
+    <input type="email" id="email" class="form-control"
+
+    formControlName="email" [(ngModel)]="usuario.email" [class.border-danger]="emailValid">
+
+    <div *ngIf="email?.errors && email?.touched">
+    <p *ngIf="email?.hasError('required')" class="text-danger">
+    El email es requerido.
+    </p>
+    </div>
+    </div>
+    <div class="m-3">
+    <label for="password1" class="form-label">password</label>
+    <input type="password" id="password1" class="form-control"
+
+    formControlName="password1" [(ngModel)]="usuario.password"
+    [class.border-danger]="password1Valid">
+
+    <div *ngIf="password1?.errors && password1?.touched">
+    <p *ngIf="password1?.hasError('required')" class="text-danger">
+    La password es requerido.
+    </p>
+    </div>
+    </div>
+    <div class="m-3">
+    <label for="password2" class="form-label">Reingrese la password</label>
+    <input type="password" id="password2" class="form-control"
+
+    formControlName="password2" [class.border-danger]="password2Valid">
+    <div *ngIf="password2?.errors && password2?.touched">
+    <p *ngIf="password2?.hasError('required')" class="text-danger">
+    El password es requerido.
+    </p>
+    </div>
+    </div>
+    <div class="m-3">
+    <button class="btn btn-primary mt-3" >Enviar</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>

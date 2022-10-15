@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form"(ngSubmit)="onEnviar($event,Usuario)">
     <div class="titulos"> <h1> INICIAR SESION</h1>
     </div>
   <div class="margen">
@@ -18,7 +18,7 @@
   <input type="password" class="form-control"placeholder= "Ingrese contraseña" formControlName="password"[class.border-danger]="PasswordValid" pattern=".{6,}" required>
   <div *ngIf="Password?.errors  && Password?.touched">
     <p *ngIf="Password?.hasError('required')" class="text-danger">
-      El password es requerido.
+      La contraseña  es requerido.
     </p>
     <p *ng If="Password?.errors?.minlength" class="text-danger">
       El password debe ser de 8 o más caracteres.
