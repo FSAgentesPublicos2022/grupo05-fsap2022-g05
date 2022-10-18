@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MI_BASE_DE_DATOSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_Clientes" />
+    </Key>
+    <Property Name="ID_Clientes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dni" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Localidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LOCALIDAD" Relationship="Self.FK_CLIENTES_LOCALIDAD" FromRole="CLIENTES" ToRole="LOCALIDAD" />
+    <NavigationProperty Name="CUENTA" Relationship="Self.FK_CUENTA_CLIENTES" FromRole="CLIENTES" ToRole="CUENTA" />
+    <NavigationProperty Name="EMAIL" Relationship="Self.FK_EMAIL_CLIENTES" FromRole="CLIENTES" ToRole="EMAIL" />
+  </EntityType>
+  <EntityType Name="COMPRA">
+    <Key>
+      <PropertyRef Name="ID_Compra" />
+    </Key>
+    <Property Name="ID_Compra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Cuenta" Type="Int32" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="CUENTA" Relationship="Self.FK_COMPRA_CUENTA" FromRole="COMPRA" ToRole="CUENTA" />
+  </EntityType>
+  <EntityType Name="CUENTA">
+    <Key>
+      <PropertyRef Name="ID_Cuenta" />
+    </Key>
+    <Property Name="ID_Cuenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CVUCliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Cliente" Type="Int32" Nullable="false" />
+    <Property Name="ID_Moneda" Type="Int32" Nullable="false" />
+    <Property Name="Saldo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="Self.FK_CUENTA_CLIENTES" FromRole="CUENTA" ToRole="CLIENTES" />
+    <NavigationProperty Name="COMPRA" Relationship="Self.FK_COMPRA_CUENTA" FromRole="CUENTA" ToRole="COMPRA" />
+    <NavigationProperty Name="MONEDA" Relationship="Self.FK_CUENTA_MONEDA" FromRole="CUENTA" ToRole="MONEDA" />
+    <NavigationProperty Name="INGRESO" Relationship="Self.FK_INGRESO_CUENTA" FromRole="CUENTA" ToRole="INGRESO" />
+    <NavigationProperty Name="TRANSFERENCIA" Relationship="Self.FK_TRANSFERENCIA_CUENTA" FromRole="CUENTA" ToRole="TRANSFERENCIA" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_VENTA_CUENTA" FromRole="CUENTA" ToRole="VENTA" />
+  </EntityType>
+  <EntityType Name="EMAIL">
+    <Key>
+      <PropertyRef Name="Email1" />
+    </Key>
+    <Property Name="Email1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Clientes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="Self.FK_EMAIL_CLIENTES" FromRole="EMAIL" ToRole="CLIENTES" />
+  </EntityType>
+  <EntityType Name="INGRESO">
+    <Key>
+      <PropertyRef Name="ID_Ingreso" />
+    </Key>
+    <Property Name="ID_Ingreso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Cuenta" Type="Int32" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="CUENTA" Relationship="Self.FK_INGRESO_CUENTA" FromRole="INGRESO" ToRole="CUENTA" />
+  </EntityType>
+  <EntityType Name="LOCALIDAD">
+    <Key>
+      <PropertyRef Name="ID_Localidad" />
+    </Key>
+    <Property Name="ID_Localidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Provincia" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="Self.FK_CLIENTES_LOCALIDAD" FromRole="LOCALIDAD" ToRole="CLIENTES" />
+    <NavigationProperty Name="PROVINCIA" Relationship="Self.FK_LOCALIDAD_PROVINCIA" FromRole="LOCALIDAD" ToRole="PROVINCIA" />
+  </EntityType>
+  <EntityType Name="MONEDA">
+    <Key>
+      <PropertyRef Name="ID_Moneda" />
+    </Key>
+    <Property Name="ID_Moneda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreMoneda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CUENTA" Relationship="Self.FK_CUENTA_MONEDA" FromRole="MONEDA" ToRole="CUENTA" />
+  </EntityType>
+  <EntityType Name="PROVINCIA">
+    <Key>
+      <PropertyRef Name="ID_Provincia" />
+    </Key>
+    <Property Name="ID_Provincia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="LOCALIDAD" Relationship="Self.FK_LOCALIDAD_PROVINCIA" FromRole="PROVINCIA" ToRole="LOCALIDAD" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TRANSFERENCIA">
+    <Key>
+      <PropertyRef Name="ID_Transferencia" />
+    </Key>
+    <Property Name="ID_Transferencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Cuenta" Type="Int32" Nullable="false" />
+    <Property Name="CVUdestino" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="CUENTA" Relationship="Self.FK_TRANSFERENCIA_CUENTA" FromRole="TRANSFERENCIA" ToRole="CUENTA" />
+  </EntityType>
+  <EntityType Name="VENTA">
+    <Key>
+      <PropertyRef Name="ID_Venta" />
+    </Key>
+    <Property Name="ID_Venta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Cuenta" Type="Int32" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="CUENTA" Relationship="Self.FK_VENTA_CUENTA" FromRole="VENTA" ToRole="CUENTA" />
+  </EntityType>
+  <Association Name="FK_CLIENTES_LOCALIDAD">
+    <End Role="LOCALIDAD" Type="Self.LOCALIDAD" Multiplicity="1" />
+    <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOCALIDAD">
+        <PropertyRef Name="ID_Localidad" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="ID_Localidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUENTA_CLIENTES">
+    <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="1" />
+    <End Role="CUENTA" Type="Self.CUENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="ID_Clientes" />
+      </Principal>
+      <Dependent Role="CUENTA">
+        <PropertyRef Name="ID_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMAIL_CLIENTES">
+    <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="1" />
+    <End Role="EMAIL" Type="Self.EMAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="ID_Clientes" />
+      </Principal>
+      <Dependent Role="EMAIL">
+        <PropertyRef Name="ID_Clientes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPRA_CUENTA">
+    <End Role="CUENTA" Type="Self.CUENTA" Multiplicity="1" />
+    <End Role="COMPRA" Type="Self.COMPRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUENTA">
+        <PropertyRef Name="ID_Cuenta" />
+      </Principal>
+      <Dependent Role="COMPRA">
+        <PropertyRef Name="ID_Cuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUENTA_MONEDA">
+    <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="1" />
+    <End Role="CUENTA" Type="Self.CUENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONEDA">
+        <PropertyRef Name="ID_Moneda" />
+      </Principal>
+      <Dependent Role="CUENTA">
+        <PropertyRef Name="ID_Moneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INGRESO_CUENTA">
+    <End Role="CUENTA" Type="Self.CUENTA" Multiplicity="1" />
+    <End Role="INGRESO" Type="Self.INGRESO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUENTA">
+        <PropertyRef Name="ID_Cuenta" />
+      </Principal>
+      <Dependent Role="INGRESO">
+        <PropertyRef Name="ID_Cuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRANSFERENCIA_CUENTA">
+    <End Role="CUENTA" Type="Self.CUENTA" Multiplicity="1" />
+    <End Role="TRANSFERENCIA" Type="Self.TRANSFERENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUENTA">
+        <PropertyRef Name="ID_Cuenta" />
+      </Principal>
+      <Dependent Role="TRANSFERENCIA">
+        <PropertyRef Name="ID_Cuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENTA_CUENTA">
+    <End Role="CUENTA" Type="Self.CUENTA" Multiplicity="1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUENTA">
+        <PropertyRef Name="ID_Cuenta" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="ID_Cuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOCALIDAD_PROVINCIA">
+    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="1" />
+    <End Role="LOCALIDAD" Type="Self.LOCALIDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCIA">
+        <PropertyRef Name="ID_Provincia" />
+      </Principal>
+      <Dependent Role="LOCALIDAD">
+        <PropertyRef Name="ID_Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MI_BASE_DE_DATOSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" />
+    <EntitySet Name="COMPRA" EntityType="Self.COMPRA" />
+    <EntitySet Name="CUENTA" EntityType="Self.CUENTA" />
+    <EntitySet Name="EMAIL" EntityType="Self.EMAIL" />
+    <EntitySet Name="INGRESO" EntityType="Self.INGRESO" />
+    <EntitySet Name="LOCALIDAD" EntityType="Self.LOCALIDAD" />
+    <EntitySet Name="MONEDA" EntityType="Self.MONEDA" />
+    <EntitySet Name="PROVINCIA" EntityType="Self.PROVINCIA" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TRANSFERENCIA" EntityType="Self.TRANSFERENCIA" />
+    <EntitySet Name="VENTA" EntityType="Self.VENTA" />
+    <AssociationSet Name="FK_CLIENTES_LOCALIDAD" Association="Self.FK_CLIENTES_LOCALIDAD">
+      <End Role="LOCALIDAD" EntitySet="LOCALIDAD" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUENTA_CLIENTES" Association="Self.FK_CUENTA_CLIENTES">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="CUENTA" EntitySet="CUENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMAIL_CLIENTES" Association="Self.FK_EMAIL_CLIENTES">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="EMAIL" EntitySet="EMAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPRA_CUENTA" Association="Self.FK_COMPRA_CUENTA">
+      <End Role="CUENTA" EntitySet="CUENTA" />
+      <End Role="COMPRA" EntitySet="COMPRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUENTA_MONEDA" Association="Self.FK_CUENTA_MONEDA">
+      <End Role="MONEDA" EntitySet="MONEDA" />
+      <End Role="CUENTA" EntitySet="CUENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INGRESO_CUENTA" Association="Self.FK_INGRESO_CUENTA">
+      <End Role="CUENTA" EntitySet="CUENTA" />
+      <End Role="INGRESO" EntitySet="INGRESO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRANSFERENCIA_CUENTA" Association="Self.FK_TRANSFERENCIA_CUENTA">
+      <End Role="CUENTA" EntitySet="CUENTA" />
+      <End Role="TRANSFERENCIA" EntitySet="TRANSFERENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENTA_CUENTA" Association="Self.FK_VENTA_CUENTA">
+      <End Role="CUENTA" EntitySet="CUENTA" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOCALIDAD_PROVINCIA" Association="Self.FK_LOCALIDAD_PROVINCIA">
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+      <End Role="LOCALIDAD" EntitySet="LOCALIDAD" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
