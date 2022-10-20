@@ -6,6 +6,7 @@ import { LayoutModule } from './layout/layout.module';
 import { PagesModule } from './pages/pages.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule } from'@angular/common/http';
+import { UsuarioService } from './services/usuario.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import {HttpClientModule } from'@angular/common/http';
     PagesModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [UsuarioService],   //UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

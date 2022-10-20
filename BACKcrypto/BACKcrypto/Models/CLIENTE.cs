@@ -11,6 +11,8 @@ namespace BACKcrypto.Models
         public string Apellido { get; set; }
         public string Nombre { get; set; }
         public int DNI { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public int Id_LOCALIDAD { get; set; }
     }
 }

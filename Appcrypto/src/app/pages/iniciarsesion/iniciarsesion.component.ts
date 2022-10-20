@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { UsuarioService , Usuario  } from 'src/app/services/usuario.service';
-
+import { UsuarioService,Usuario } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-iniciarsesion',
@@ -12,11 +10,13 @@ import { UsuarioService , Usuario  } from 'src/app/services/usuario.service';
   styleUrls: ['./iniciarsesion.component.css']
 })
 export class IniciarsesionComponent implements OnInit {
+  usuario: Usuario = new Usuario();
+  error:Error | undefined;                 // VER SI ESTA OK
+
   form: FormGroup;
-  usuario: Usuario [];
-  constructor(private formBuilder : FormBuilder,
+
+  constructor(private formBuilder : FormBuilder,UsuarioServicio:UsuarioService,
     private authService: AuthService,
-    private usuarioService:UsuarioService,
     private router: Router){
    this.form= this.formBuilder.group(
     {
@@ -45,15 +45,16 @@ export class IniciarsesionComponent implements OnInit {
   }
   onEnviar(event: Event, usuario:Usuario): void {
     event.preventDefault;
-    this.authService.login(this.Usuario)
+    this.authService.login(this.usuario)
 .subscribe(
 data => {
 console.log("DATA"+ JSON.stringify( data));
 this.router.navigate(['/home/movimientos']);
 },
+
 error => {
-this.error = error;
-}
+  this['error'] = error;
+ }
 );
 }
 }

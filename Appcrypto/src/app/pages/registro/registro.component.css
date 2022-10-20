@@ -5,9 +5,13 @@
     margin-bottom: 100px;
     margin-left: 350px;
     padding: 20px;
-    
+
     }
     .button-tamaño {
         width: 600px;
-        
-    }    
+
+    }
+      p{font-family:cursive ;
+        font-size: 12px;
+
+      }

@@ -38,11 +38,11 @@
 
 
 </form>-->
-
-<div class="container">
+<div class="titulos"> <h1> REGISTRO USUARIO</h1>
+</div>
+<div class="margen">
   <div class="row">
   <div class="col-md-12 registro-form-header">
-  <p class="registro-form-font-header">Registro<span> Usuario</span><p>
   </div>
   </div>
   <div class="row m-3">
@@ -89,7 +89,6 @@
     <input type="email" id="email" class="form-control"
 
     formControlName="email" [(ngModel)]="usuario.email" [class.border-danger]="emailValid">
-
     <div *ngIf="email?.errors && email?.touched">
     <p *ngIf="email?.hasError('required')" class="text-danger">
     El email es requerido.
@@ -105,18 +104,18 @@
 
     <div *ngIf="password1?.errors && password1?.touched">
     <p *ngIf="password1?.hasError('required')" class="text-danger">
-    La password es requerido.
+    La contraseña es requerido.
     </p>
     </div>
     </div>
     <div class="m-3">
-    <label for="password2" class="form-label">Reingrese la password</label>
+    <label for="password2" class="form-label">Reingrese la contraseña</label>
     <input type="password" id="password2" class="form-control"
 
     formControlName="password2" [class.border-danger]="password2Valid">
     <div *ngIf="password2?.errors && password2?.touched">
     <p *ngIf="password2?.hasError('required')" class="text-danger">
-    El password es requerido.
+    La contraseña es requerido.
     </p>
     </div>
     </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService , Usuario } from 'src/app/services/usuario.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -11,17 +12,18 @@ export class RegistroComponent implements OnInit {
   form: FormGroup;
   usuario: Usuario= new Usuario();
 
-
   constructor(private formBuilder:FormBuilder, private usuarioService: UsuarioService, private router:Router)
-   {this.form= this.formBuilder.group({
+   {this.form= this.formBuilder.group(
+    {
     nombre:['', [Validators.required]] ,
     apellido:['', [Validators.required]],
     dni:['', [Validators.required]],
     password1:['',[Validators.required]],
     password2:['',[Validators.required]],
     email:['', [Validators.required, Validators.email]]
-    })
-      }
+    }
+    )
+  }
 
   ngOnInit(): void {
   }
@@ -35,8 +37,8 @@ export class RegistroComponent implements OnInit {
     this.usuarioService.onCrearUsuario(usuario).subscribe(
       data => {
         if (data.id>0)
-{
-alert("El registro ha sido creado satisfactoriamente. A continuación,por favor Inicie Sesión.");
+    {
+       alert("El registro ha sido creado satisfactoriamente. A continuación,por favor Inicie Sesión.");
 this.router.navigate(['/iniciarsesion'])
 }
 })
