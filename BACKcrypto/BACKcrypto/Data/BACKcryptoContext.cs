@@ -25,8 +25,6 @@ namespace BACKcrypto.Data
 
         public System.Data.Entity.DbSet<BACKcrypto.Models.CUENTA> CUENTAS { get; set; }
 
-        public System.Data.Entity.DbSet<BACKcrypto.Models.EMAIL> EMAILS { get; set; }
-
         public System.Data.Entity.DbSet<BACKcrypto.Models.INGRESO> INGRESOS { get; set; }
 
         public System.Data.Entity.DbSet<BACKcrypto.Models.LOCALIDAD> LOCALIDADES { get; set; }

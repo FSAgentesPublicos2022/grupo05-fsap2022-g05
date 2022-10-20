@@ -31,6 +31,7 @@ header.fondo {
     text-align: right;
      font-family:Verdana, Geneva, Tahoma, sans-serif;
     display: inline;
+    font-size: 25px;
      /*border: 1px solid darkblue;
    text-shadow: 3px 3px 1px black;
     */
@@ -42,7 +43,6 @@ header.fondo {
     padding-bottom: 10px;
     background-color:black;
     color: white;
-
   }
 
   p {

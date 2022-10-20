@@ -10,14 +10,15 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AuthService {
-  url="https://reqres.in/api/login";
+  url="https://localhost:44392";
+  //"https://reqres.in/api/users/1";
 
 loggedIn= new BehaviorSubject<boolean>(false);
 currentUserSubject: BehaviorSubject<Usuario>;
 currentUser: Observable<Usuario>;
 
   constructor(private http:HttpClient) {
-      console.log("Servicio de Atuenticación está corriendo");
+      console.log("Servicio de Autenticación está corriendo");
       this.currentUserSubject = new
       BehaviorSubject<Usuario>(JSON.parse(localStorage.getItem('currentUser') || '{}'));
       this.currentUser = this.currentUserSubject.asObservable();
@@ -31,4 +32,14 @@ this.loggedIn.next(true);
 return data;
 }));
 }
+logout(): void{
+  localStorage.removeItem('currentUser');
+  this.loggedIn.next(false);
+  }
+  get usuarioAutenticado(): Usuario {
+    return this.currentUserSubject.value;
+    }
+    get estaAutenticado(): Observable<boolean> {
+    return this.loggedIn.asObservable();
+    }
 }

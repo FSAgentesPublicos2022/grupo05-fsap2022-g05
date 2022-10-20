@@ -165,7 +165,6 @@
     <Compile Include="Controllers\CLIENTESController.cs" />
     <Compile Include="Controllers\COMPRASController.cs" />
     <Compile Include="Controllers\CUENTASController.cs" />
-    <Compile Include="Controllers\EMAILSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\INGRESOSController.cs" />
     <Compile Include="Controllers\LOCALIDADESController.cs" />
@@ -181,7 +180,6 @@
     <Compile Include="Models\CLIENTE.cs" />
     <Compile Include="Models\COMPRA.cs" />
     <Compile Include="Models\CUENTA.cs" />
-    <Compile Include="Models\EMAIL.cs" />
     <Compile Include="Models\INGRESO.cs" />
     <Compile Include="Models\LOCALIDAD.cs" />
     <Compile Include="Models\MONEDA.cs" />
