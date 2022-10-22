@@ -9,8 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { OperacionesComponent } from './operaciones/operaciones.component';
 import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
-import { RouterModule } from '@angular/router';
-
+import { RouterModule } from '@angular/router'
+import { Pagina404Component } from './pagina404/pagina404.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,11 +24,13 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     OperacionesComponent,
     CriptomonedaComponent,
-    TransaccionesComponent
+    TransaccionesComponent,
+    Pagina404Component
   ],
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule
   ],
 
   exports:[
