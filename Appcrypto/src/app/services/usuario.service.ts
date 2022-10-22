@@ -18,7 +18,7 @@ id:number=0;
 
 export class UsuarioService {
 
-  url= "https://localhost:44392";
+  url= "https://localhost:44380/api/CLIENTES";
  //url= "https://reqres.in/api/users/1"
 
   constructor(private http:HttpClient)

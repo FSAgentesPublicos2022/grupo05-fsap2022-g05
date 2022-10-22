@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AuthService {
-  url="https://localhost:44392";
+  url="https://localhost:44380/api/CLIENTES";
   //"https://reqres.in/api/users/1";
 
 loggedIn= new BehaviorSubject<boolean>(false);
