@@ -1,0 +1,49 @@
+<script> //ver si hay que crear archivo script
+  var saldo = 0;
+
+  function deposito() {
+
+    var valor=parseInt(document.getElementsByName("valor1")[0].value);
+    if(!isNaN(valor))
+    {
+      saldo=saldo+valor;
+      document.getElementById("saldo").innerHTML=saldo;
+    }
+  }
+
+  document.getElementById("boton").onclick=function() {
+    deposito();
+  }
+</script>
+<div class="margen">
+<div class="row">
+  <div class="col-6 border border-4">
+     <form action="#"class="mb-5 form">
+      <div class="container">
+        <div>
+          <script>
+          date = new Date().toLocaleDateString();
+          document.write(date);
+          </script>
+          <h3>Saldo actual: <span id="saldo">0</span></h3>
+          </div>
+        <div class="mb-3 form-group form-align-center">
+          <label class="form-label">¿Cuánto desea depositar?:</label>
+             <div class="input-group mb-3">
+               <span class="input-group-text">$</span>
+               <input type="text" class="form-control" name="valor1"  >
+               <span class="input-group-text">.00</span>
+
+              </div>
+               </div>
+         <div class="row">
+               <div class="col-12  border-none text-center">
+                  <button id="boton" value= "Enviar" class="btn btn-primary button3" type="button" onclick="deposito()">Depositar dinero</button>
+
+              </div>
+         </div>
+        </div>
+     </form>
+</div>
+</div>
+

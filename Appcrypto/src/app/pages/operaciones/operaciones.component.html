@@ -1,1 +1,46 @@
-<p>operaciones works!</p>
+
+  <div class="container ms-auto">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="icono">
+        <span class="fa-stack fa-4x">
+        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+        <i class="fas fa-download fa-stack-1x fa-inverse"></i>
+        </span>
+      </div>
+
+      <a class="nav-link" routerLink="/home/ingreso">
+        <h4 class="my-3">INGRESO</h4></a>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="icono">
+    <span class="fa-stack fa-4x">
+    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+    <i class="fas fa-wallet fa-stack-1x fa-inverse"></i>
+    </span>
+  </div>
+  <a class="nav-link" routerLink="/home/operaciones/compra-venta">
+    <h4 class="my-3"> COMPRA-VENTA </h4></a>
+
+    </div>
+    <div class="col-md-4">
+     <div class="icono">
+    <span class="fa-stack fa-4x">
+    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+    <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+    </span>
+  </div>
+
+  <a class="nav-link" routerLink="/home/operaciones/transferencia">
+    <h4 class="my-3"> TRANSFERENCIA</h4></a>
+
+
+    </div>
+    </div>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+

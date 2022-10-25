@@ -12,6 +12,9 @@ import { TransaccionesComponent } from './transacciones/transacciones.component'
 import { RouterModule } from '@angular/router'
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IngresoComponent } from './operaciones/ingreso/ingreso.component';
+import { CompraVentaComponent } from './operaciones/compra-venta/compra-venta.component';
+import { TransferenciaComponent } from './operaciones/transferencia/transferencia.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     OperacionesComponent,
     CriptomonedaComponent,
     TransaccionesComponent,
-    Pagina404Component
+    Pagina404Component,
+    IngresoComponent,
+    CompraVentaComponent,
+    TransferenciaComponent
   ],
   imports: [
     CommonModule,

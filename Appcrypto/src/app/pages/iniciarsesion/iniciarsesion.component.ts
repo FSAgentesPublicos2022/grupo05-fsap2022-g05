@@ -21,7 +21,7 @@ export class IniciarsesionComponent implements OnInit {
    this.form= this.formBuilder.group(
     {
       password: ['',[Validators.required,Validators.minLength(8)]],
-      mail:['',[Validators.required, Validators.email]]
+      email:['',[Validators.required, Validators.email]]
     })
    }
    get Password()
@@ -43,13 +43,14 @@ export class IniciarsesionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onEnviar(event: Event, usuario:Usuario): void {
-    event.preventDefault;
-    this.authService.login(this.usuario)
+  onEnviar(event: Event): void {
+    event.preventDefault();
+    this.authService.login({...this.form.value})
 .subscribe(
-data => {
-console.log("DATA"+ JSON.stringify( data));
-this.router.navigate(['/home/movimientos']);
+data => { if (data) {
+
+  this.router.navigate(['/home']);
+}else{alert("la contraseña o usuario son incorrectos")}
 },
 
 error => {
