@@ -13,30 +13,36 @@ import { IngresoComponent } from './pages/operaciones/ingreso/ingreso.component'
 import { CompraVentaComponent } from './pages/operaciones/compra-venta/compra-venta.component';
 import { TransferenciaComponent } from './pages/operaciones/transferencia/transferencia.component';
 
-
 const routes: Routes = [
-  {path:'servicios',component:ServiciosComponent},
-  {path:'quienessomos',component: QuienessomosComponent},
-  {path:'quienessomos/:id',component:IntegranteComponent},
-  {path:'registro',component: RegistroComponent},
-  {path:'iniciarsesion',component:IniciarsesionComponent},
-  {path:'criptomoneda', component:CriptomonedaComponent},
-  {path:'operaciones',component:OperacionesComponent},//Agregar rutas hijas Ingreso, ventay compra , trsnferencia.
+  { path: 'servicios', component: ServiciosComponent },
+  { path: 'quienessomos', component: QuienessomosComponent },
+  { path: 'quienessomos/:id', component: IntegranteComponent },
+  { path: 'registro', component: RegistroComponent },
+  { path: 'iniciarsesion', component: IniciarsesionComponent },
+  { path: 'criptomoneda', component: CriptomonedaComponent },
+  { path: 'operaciones', component: OperacionesComponent }, //Agregar rutas hijas Ingreso, ventay compra , trsnferencia.
 
-  {path:'home', component: HomeComponent,
-children:[
-{path:'transacciones', component: TransaccionesComponent},
-{path:'operaciones', component: OperacionesComponent,
-children:[
-  {path:'ingreso',component:IngresoComponent},
-  {path:'compra-venta',component:CompraVentaComponent},
-  {path:'transferencia', component: TransferenciaComponent}
-,]}
-]}
-]
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: 'transacciones', component: TransaccionesComponent },
+      {
+        path: 'operaciones',
+        component: OperacionesComponent,
+        children: [
+
+          { path: 'compra-venta', component: CompraVentaComponent },
+          { path: 'transferencia', component: TransferenciaComponent },
+        ],
+      },
+      { path: 'ingreso', component: IngresoComponent },
+    ],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

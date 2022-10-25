@@ -1,4 +1,5 @@
-.margen{background-color: rgb(226, 226, 226);
+.margen{
+  background-color: rgb(226, 226, 226);
   width: 600px;
   border-style: ridge;
   margin-top: 10px;

@@ -1,10 +1,10 @@
-<form [formGroup]="form"(ngSubmit)="onEnviar($event,usuario)">
+<form [formGroup]="form"(ngSubmit)="onEnviar($event)">
     <div class="titulos"> <h1> INICIAR SESION</h1>
     </div>
   <div class="margen">
   <div class="m-3">
   <label for="exampleInputEmail1" class="form-label">Email</label>
-  <input type="email"  class="form-control" placeholder= "Ingrese email" formControlName="mail" [class.border-danger]="MailValid">
+  <input type="email"  class="form-control" placeholder= "Ingrese email" formControlName="email" [class.border-danger]="MailValid">
   <div *ngIf="Mail?.errors && Mail?.touched">
     <p *ngIf="Mail?.hasError('required')" class="text-danger">
       El email es requerido.
