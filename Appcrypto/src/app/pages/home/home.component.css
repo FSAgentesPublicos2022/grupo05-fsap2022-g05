@@ -1,12 +1,29 @@
 h4{text-align:center;
   background-color: black;
   color: white;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  padding: 10px;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
+ul{
+  background-color: black;
+  border:solid;
 }
 
 a{text-align: center;
+  size: 50px;
 
 }
+
+.margen{
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  }
+
+  p{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+  }

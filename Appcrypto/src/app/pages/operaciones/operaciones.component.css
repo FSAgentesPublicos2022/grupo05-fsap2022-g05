@@ -4,7 +4,11 @@
     margin-right: 100px;
     margin-top: 50px;
     width: 50%;
+    align-items: center;
+    font-size: small;
   }
-   h4 {
-    color: rgb(15, 114, 251);
-    }
+h4{
+  text-align: center;
+  font-family:unset;
+  padding-right: 80px;
+}

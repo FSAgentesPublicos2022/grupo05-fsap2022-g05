@@ -27,16 +27,10 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: 'transacciones', component: TransaccionesComponent },
-      {
-        path: 'operaciones',
-        component: OperacionesComponent,
-        children: [
-
-          { path: 'compra-venta', component: CompraVentaComponent },
-          { path: 'transferencia', component: TransferenciaComponent },
-        ],
-      },
+      { path: 'operaciones',component: OperacionesComponent },
       { path: 'ingreso', component: IngresoComponent },
+      { path: 'compra-venta', component: CompraVentaComponent },
+      { path: 'transferencia', component: TransferenciaComponent },
     ],
   },
 ];

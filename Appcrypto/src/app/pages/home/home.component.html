@@ -1,25 +1,29 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-      <nav class="nav flex-column">
-        <ul class="list-group">
-          <h4>HOME</h4>
-          <li class="list-group-item list-group-item-success">
-          <a class="nav-link " routerLink="/home/operaciones">OPERACIONES</a>
-          </li>
-          <li class="list-group-item list-group-item-success">
-          <a class="nav-link " routerLink="/home/transacciones">MOVIMIENTOS</a>
-        </li>
-          <li class="list-group-item list-group-item-success">
-            <a class="nav-link " routerLink="">COTIZACIONES</a>
-          </li>
-
-        </ul>
- </nav>
-
+<div class="margen">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <nav class="nav flex-column">
+          <ul class="list-group">
+            <h4>HOME</h4>
+            <li class="list-group-item list-group-item-black">
+              <a class="nav-link" routerLink="/home/operaciones"
+                ><p>OPERACIONES</p></a
+              >
+            </li>
+            <li class="list-group-item list-group-item-black">
+              <a class="nav-link" routerLink="/home/transacciones"
+                ><p>MOVIMIENTOS</p></a
+              >
+            </li>
+            <li class="list-group-item list-group-item-black">
+              <a class="nav-link" routerLink=""><p>COTIZACIONES</p></a>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div class="col-md-10">
         <router-outlet></router-outlet>
       </div>
-      </div>
-      </div>
+    </div>
+  </div>
+</div>
