@@ -11,7 +11,7 @@ import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
 import { RouterModule } from '@angular/router'
 import { Pagina404Component } from './pagina404/pagina404.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IngresoComponent } from './operaciones/ingreso/ingreso.component';
 import { CompraVentaComponent } from './operaciones/compra-venta/compra-venta.component';
 import { TransferenciaComponent } from './operaciones/transferencia/transferencia.component';
@@ -36,7 +36,9 @@ import { TransferenciaComponent } from './operaciones/transferencia/transferenci
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    /*NgModule*/
+    FormsModule
   ],
 
   exports:[
