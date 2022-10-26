@@ -7,7 +7,6 @@ import { PagesModule } from './pages/pages.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule } from'@angular/common/http';
 import { UsuarioService } from './services/usuario.service';
-import { CargarScriptsService } from './services/cargar-scripts.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,7 @@ import { CargarScriptsService } from './services/cargar-scripts.service';
     HttpClientModule,
 
   ],
-  providers: [UsuarioService, CargarScriptsService],   //UsuarioService],
+  providers: [UsuarioService],   //UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
