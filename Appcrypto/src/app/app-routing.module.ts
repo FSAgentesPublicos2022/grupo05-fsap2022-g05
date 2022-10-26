@@ -12,6 +12,7 @@ import { CriptomonedaComponent } from './pages/criptomoneda/criptomoneda.compone
 import { IngresoComponent } from './pages/operaciones/ingreso/ingreso.component';
 import { CompraVentaComponent } from './pages/operaciones/compra-venta/compra-venta.component';
 import { TransferenciaComponent } from './pages/operaciones/transferencia/transferencia.component';
+import { CotizacionComponent } from './pages/cotizacion/cotizacion.component';
 
 const routes: Routes = [
   { path: 'servicios', component: ServiciosComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
   { path: 'iniciarsesion', component: IniciarsesionComponent },
   { path: 'criptomoneda', component: CriptomonedaComponent },
+  {path:'cotizacion',component:CotizacionComponent},
   { path: 'operaciones', component: OperacionesComponent }, //Agregar rutas hijas Ingreso, ventay compra , trsnferencia.
 
   {

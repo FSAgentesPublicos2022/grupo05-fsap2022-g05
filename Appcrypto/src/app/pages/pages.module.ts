@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { IngresoComponent } from './operaciones/ingreso/ingreso.component';
 import { CompraVentaComponent } from './operaciones/compra-venta/compra-venta.component';
 import { TransferenciaComponent } from './operaciones/transferencia/transferencia.component';
+import { CotizacionComponent } from './cotizacion/cotizacion.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TransferenciaComponent } from './operaciones/transferencia/transferenci
     Pagina404Component,
     IngresoComponent,
     CompraVentaComponent,
-    TransferenciaComponent
+    TransferenciaComponent,
+    CotizacionComponent
   ],
   imports: [
     CommonModule,
