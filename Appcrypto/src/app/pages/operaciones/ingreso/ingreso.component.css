@@ -1,4 +1,4 @@
-/*.margen{
+.margen{
   background-color: rgb(226, 226, 226);
   width: 600px;
   border-style: ridge;
@@ -6,73 +6,4 @@
   margin-bottom: 100px;
   margin-left: 200px;
   padding: 20px;
-  }*/
-
-  body, html {
-    height: 100%;
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #fff;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /* No Scrollbar */
-    overflow: hidden;
-}
-.form-box {
-    width: 500px; /*ancho del contenedor del formulario*/
-    padding: 20px;
-    background: rgb(226, 226, 226);
-    text-align: center;
-    border-style: ridge;
-    margin-top: 5px;
-  margin-bottom: 50px;
-  margin-left: 200px;
-  
-}
-.titulo {
-    color: rgb(12, 11, 11);
-    /*text-transform: uppercase;*/
-    font-weight: 500;
-}
-.form-box input[type="text"] {
-    border: 0;
-    background: ffff;
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    border: 2px solid #3742fa;
-    padding: 14px 10px;
-    width: 300px; /*ancho de los input*/
-    outline: none;
-    color: rgb(24, 21, 21);
-    border-radius: 24px;
-    transition: 0.25s;
-}
-
- /*.form-box button[type="submit"]:hover {
-    background: none;
-}*/
-button {
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    border: 0;
-    background: #5352ed;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #3742fa;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-    
-}
+  }
