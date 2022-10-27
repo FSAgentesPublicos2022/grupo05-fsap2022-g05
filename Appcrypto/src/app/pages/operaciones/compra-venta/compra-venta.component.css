@@ -1,0 +1,16 @@
+.margen{background-color: rgb(226, 226, 226);
+  width: 800px;
+  border-style: ridge;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-left: 400px;
+  padding: 80px;
+
+  }
+  p{
+    font-size: 20px;
+    text-align:center;
+    color: black;
+    font-weight: bold;
+    margin: 20px;
+    }
