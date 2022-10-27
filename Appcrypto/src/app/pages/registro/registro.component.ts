@@ -87,4 +87,5 @@ export class RegistroComponent implements OnInit {
   get DniValid() {
     return this.Dni?.touched && !this.Dni?.valid;
   }
+
 }

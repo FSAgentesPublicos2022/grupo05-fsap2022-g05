@@ -1,14 +1,19 @@
-.margen{
+.margen {
   background-color: black;
   background-image: linear-gradient(rgb(179, 176, 176), rgb(219, 219, 219));
   width: 800px;
- margin: auto;
- margin-top: 30px;
+  margin: auto;
+  margin-top: 30px;
   padding: 60px;
-  }
-
-p{font-family:cursive ;
-  font-size: 12px;
-
 }
 
+p {
+  font-family: cursive;
+  font-size: 12px;
+}
+button {
+  font-size: 24px;
+  align-self: center;
+  margin-left: 250px;
+  margin-top: 10px;
+}
