@@ -1,16 +1,22 @@
-.margen{background-color: rgb(226, 226, 226);
+.margen{
+  background-color: black;
+  background-image: linear-gradient(rgb(179, 176, 176), rgb(219, 219, 219));
   width: 800px;
-  border-style: ridge;
   margin-top: 10px;
-  margin-bottom: 100px;
-  margin-left: 400px;
-  padding: 80px;
-
+  margin-bottom: 80px;
+  margin-left: 300px;
+  padding: 60px;
   }
   p{
     font-size: 20px;
     text-align:center;
-    color: black;
+    color:black;
     font-weight: bold;
-    margin: 20px;
+    margin: 10px;
+    }
+
+    button{
+ font-size: 24px;
+ align-self: center;
+ margin-left: 250px;
     }

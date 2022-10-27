@@ -1,33 +1,32 @@
-h4{text-align:center;
-  background-color: black;;
+h4 {
+  text-align: center;
   color: white;
   font-size: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: bold;
-}
-
-ul{
   background-color: black;
-  border:inset;
+  background-image: linear-gradient(black, rgb(208, 205, 205));
 }
 
-a{text-align: center;
+ul {
+  background-color: black;
+  border: inset;
+}
+
+a {
+  text-align: center;
   size: 50px;
-
 }
-
-.margen{
+.margen {
   margin-top: 20px;
   margin-bottom: 100px;
   margin-left: 10px;
-  }
+}
 
-  p{
-    font-size: 20px;
-    text-align: center;
-    color: black;
-      font-weight: bold;
-    }
-
-
+p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}

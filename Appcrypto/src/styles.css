@@ -42,6 +42,7 @@ header.fondo {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color:black;
+    background-image: linear-gradient(black, rgb(208, 205, 205));
     color: white;
   }
 

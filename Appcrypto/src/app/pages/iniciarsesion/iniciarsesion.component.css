@@ -1,11 +1,12 @@
-.margen{background-color: rgb(226, 226, 226);
-width: 800px;
-border-style: ridge;
-margin-top: 10px;
-margin-bottom: 100px;
-margin-left: 600px;
-padding: 20px;
-}
+.margen{
+  background-color: black;
+  background-image: linear-gradient(rgb(179, 176, 176), rgb(219, 219, 219));
+  width: 800px;
+ margin: auto;
+ margin-top: 30px;
+  padding: 60px;
+  }
+
 p{font-family:cursive ;
   font-size: 12px;
 
